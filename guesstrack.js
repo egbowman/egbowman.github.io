@@ -6,9 +6,9 @@ var tracks = ["3.7 4.0 3.8 3.7 3.9 3.4 3.8 3.3 3.6 3.5 3.8 4.0 4.0 4.2 4.1 4.1 3
 var diffs = [] 
 var diffs2 = []
 var index = []
-var ind = Math.floor(Math.random()  names.length)
+var ind = Math.floor(Math.random() * names.length)
 index[0] = ind
- for(i = 0; i  names.length; i++){
+ for(i = 0; i < names.length; i++){
   diffs[i] = Math.abs(means[i] - means[index])
   diffs2[i] = Math.abs(means[i] - means[index])
  }
@@ -16,7 +16,7 @@ function check (c) {
  if(c){
   alert('You got it!')
  } else {
-  alert('Nope, it was ' + names[ind] +  Season  + seasons[ind])
+  alert('Nope, it was ' + names[ind] + " Season " + seasons[ind])
  }
 }
 diffs2.sort();
@@ -31,4 +31,4 @@ var ind3 = diffs.indexOf(diffs2[3]);
 if(ind3 == ind2){ ind3 = diffs.indexOf(diffs2[3],ind2+1); }
 index.push(ind3);
 index.sort();
-document.write(b + tracks[ind] + bbr br button onClick='check(+(index[0] == ind)+);' + names[index[0]] +  Season  + seasons[index[0]] + button button onClick='check(+(index[1]==ind)+);' + names[index[1]] +  Season  + seasons[index[1]] + button button onClick='check(+(index[2]==ind)+);' +  names[index[2]] +  Season  + seasons[index[2]] + button button onClick='check(+(index[3]==ind)+);' + names[index[3]] +  Season  + seasons[index[3]] + button)
+document.write("<b>" + tracks[ind] + "</b><br /><br /><button onClick='check("+(index[0] == ind)+");'>" + names[index[0]] + " Season " + seasons[index[0]] + "</button> <button onClick='check("+(index[1]==ind)+");'>" + names[index[1]] + " Season " + seasons[index[1]] + "</button> <button onClick='check("+(index[2]==ind)+");'>" +  names[index[2]] + " Season " + seasons[index[2]] + "</button> <button onClick='check("+(index[3]==ind)+");'>" + names[index[3]] + " Season " + seasons[index[3]] + "</button>")
